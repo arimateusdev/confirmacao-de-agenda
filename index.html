@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Agendamento - Beta</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Confirmação de Agenda <span>Beta</span></h2><br>
+        <form action="">
+            <div>
+                <span>
+                    <label for="name">Paciente</label><br>
+                    <input id="name" type="text" placeholder="Nome">
+                </span>
+
+                <span>
+                    <label for="number">Número</label><br>
+                    <input id="number" type="text" placeholder="Número">
+                </span>
+
+                <span>
+                    <label>Profissional</label><br>
+                </span>
+
+                <div>
+                    <input id="ariston" type="radio" name="profissional" class="profissional" value=" com *Dr. Ariston">
+                    <label for="ariston">Dr. Ariston</label>
+
+                    <input id="ricardo" type="radio" name="profissional" class="profissional" value=" com *Dr. Ricardo">
+                    <label for="ricardo">Dr. Ricardo</label>
+
+                    <input id="tadeu" type="radio" name="profissional" class="profissional" value=" com *Dr. Tadeu">
+                    <label for="tadeu">Dr. Tadeu</label>
+
+                    <br>
+
+                    <input id="luanda" type="radio" name="profissional" class="profissional" value=" com *Dra. Luanda">
+                    <label for="luanda">Dra. Luanda</label>
+
+                    <input id="victor" type="radio" name="profissional" class="profissional" value=" com *Dr. Victor">
+                    <label for="victor">Dr. Victor</label>
+
+                    <input id="isabella" type="radio" name="profissional" class="profissional" value=" com *Dra. Isabella">
+                    <label for="isabella">Dra. Isabella</label>
+
+                    <br>
+
+                    <input id="virginia" type="radio" name="profissional" class="profissional"
+                        value=", *sessão* com a fisioterapeuta *Virginia,">
+                    <label for="virginia">Virginia</label>
+
+                    <input id="graziela" type="radio" name="profissional" class="profissional"
+                        value=", *exame* com a fonoaudióloga *Graziela,">
+                    <label for="graziela">Graziela</label>
+
+                    <input id="mariajose" type="radio" name="profissional" class="profissional"
+                        value=", *exame* com a fonoaudióloga *Maria Jose,">
+                    <label for="mariajose">Maria Jose</label>
+
+                    <br>
+
+                    <input id="endoscopia" type="radio" name="profissional" class="profissional"
+                        value=", *exame* de *Endoscopia,">
+                    <label for="endoscopia">Endoscopia</label>
+
+                    <br><br>
+
+                </div>
+
+                <span>
+                    <label>Dia</label><br>
+                </span>
+
+                <div>
+                    <input id="amanha" type="radio" name="dia" class="dia" value="amanhã" checked>
+                    <label for="amanha">Amanhã</label><br>
+
+                    <input type="radio" name="dia" id="other" value="other"> <label for="other">Outro</label> <input
+                        id="inputother" type="date" onchange="changeRadioOther()">
+
+                    <br><br>
+
+                </div>
+
+                <span class="hora">
+                    <label for="hora">Hora</label><br>
+                    <input id="hora" type="time" placeholder="Hora" class="hora">
+                </span>
+
+            </div>
+
+            <button onclick="sendToWhatsapp()">Enviar</button>
+        </form>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
