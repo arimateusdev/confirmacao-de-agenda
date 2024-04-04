@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação de Agendamento - Beta</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,95 +13,143 @@
 <body>
 
     <div class="container">
-        <h2>Confirmação de Agenda <span>Beta</span></h2><br>
-        <form action="">
+
+        <h2 class="titulo">Confirmação de Agenda</h2><br>
+
+        <button onclick="myFunction()" class="button-6" role="button">Confirmar Agenda</button>
+
+        <form method="get" action="./confirmar-agenda.html" id="agendas">
+
             <div>
                 <span>
-                    <label for="name">Paciente</label><br>
-                    <input id="name" type="text" placeholder="Nome">
+                    <br><label>Selecione um Agenda:</label><br><br>
                 </span>
 
-                <span>
-                    <label for="number">Número</label><br>
-                    <input id="number" type="text" placeholder="Número">
-                </span>
+                <table>
+                    <div class="medicos">
 
-                <span>
-                    <label>Profissional</label><br>
-                </span>
+                        <th colspan="3"><label>Médicos:</label><br></th>
+                        <tr>
+                            <td><input id="ariston" type="radio" name="profissional" class="profissional"
+                                    value=" com *Dr. Ariston" data-value-two="Dr. Ariston">
+                                <label for="ariston">Dr. Ariston</label>
+                            </td>
 
-                <div>
-                    <input id="ariston" type="radio" name="profissional" class="profissional" value=" com *Dr. Ariston">
-                    <label for="ariston">Dr. Ariston</label>
+                            <td><input id="ricardo" type="radio" name="profissional" class="profissional"
+                                    value=" com *Dr. Ricardo" data-value-two="Dr. Ricardo">
+                                <label for="ricardo">Dr. Ricardo</label>
+                            </td>
 
-                    <input id="ricardo" type="radio" name="profissional" class="profissional" value=" com *Dr. Ricardo">
-                    <label for="ricardo">Dr. Ricardo</label>
+                            <td><input id="tadeu" type="radio" name="profissional" class="profissional"
+                                    value=" com *Dr. Tadeu" data-value-two="Dr. Tadeu">
+                                <label for="tadeu">Dr. Tadeu</label>
+                            </td>
+                        </tr>
 
-                    <input id="tadeu" type="radio" name="profissional" class="profissional" value=" com *Dr. Tadeu">
-                    <label for="tadeu">Dr. Tadeu</label>
+                        <tr>
+                            <td><input id="luanda" type="radio" name="profissional" class="profissional"
+                                    value=" com *Dra. Luanda" data-value-two="Dra. Luanda">
+                                <label for="luanda">Dra. Luanda</label>
+                            </td>
 
-                    <br>
+                            <td><input id="victor" type="radio" name="profissional" class="profissional"
+                                    value=" com *Dr. Victor" data-value-two="Dr. Victor">
+                                <label for="victor">Dr. Victor</label>
+                            </td>
 
-                    <input id="luanda" type="radio" name="profissional" class="profissional" value=" com *Dra. Luanda">
-                    <label for="luanda">Dra. Luanda</label>
+                            <td><input id="isabella" type="radio" name="profissional" class="profissional"
+                                    value=" com *Dra. Isabella" data-value-two="Dra. Isabella">
+                                <label for="isabella">Dra. Isabella</label>
+                            </td>
+                        </tr>
 
-                    <input id="victor" type="radio" name="profissional" class="profissional" value=" com *Dr. Victor">
-                    <label for="victor">Dr. Victor</label>
+                        <tr>
+                            <td><br></td>
+                        </tr>
 
-                    <input id="isabella" type="radio" name="profissional" class="profissional" value=" com *Dra. Isabella">
-                    <label for="isabella">Dra. Isabella</label>
+                        <th colspan="3"><label>Fonoaudiólogas e Fisioterapeutas:</label><br></th>
 
-                    <br>
+                        <tr>
+                            <td>
+                                <input id="virginia" type="radio" name="profissional" class="profissional"
+                                    value=", *sessão* com a fisioterapeuta *Virginia," data-value-two="Virginia">
+                                <label for="virginia">Virginia</label>
+                            </td>
 
-                    <input id="virginia" type="radio" name="profissional" class="profissional"
-                        value=", *sessão* com a fisioterapeuta *Virginia,">
-                    <label for="virginia">Virginia</label>
+                            <td>
+                                <input id="graziela" type="radio" name="profissional" class="profissional"
+                                    value=", *exame* com a fonoaudióloga *Graziela," data-value-two="Graziela">
+                                <label for="graziela">Graziela</label>
+                            </td>
 
-                    <input id="graziela" type="radio" name="profissional" class="profissional"
-                        value=", *exame* com a fonoaudióloga *Graziela,">
-                    <label for="graziela">Graziela</label>
+                            <td>
+                                <input id="mariajose" type="radio" name="profissional" class="profissional"
+                                    value=", *exame* com a fonoaudióloga *Maria Jose," data-value-two="Maria Jose">
+                                <label for="mariajose">Maria Jose</label>
 
-                    <input id="mariajose" type="radio" name="profissional" class="profissional"
-                        value=", *exame* com a fonoaudióloga *Maria Jose,">
-                    <label for="mariajose">Maria Jose</label>
+                            </td>
+                        </tr>
 
-                    <br>
+                        <tr>
+                            <td><br></td>
+                        </tr>
 
-                    <input id="endoscopia" type="radio" name="profissional" class="profissional"
-                        value=", *exame* de *Endoscopia,">
-                    <label for="endoscopia">Endoscopia</label>
+                        <th colspan="3"><label>Exames:</label></th>
+                        <tr>
+                            <td><input id="endoscopia" type="radio" name="profissional" class="profissional"
+                                    value=", *exame* de *Endoscopia," data-value-two="Endoscopia">
+                                <label for="endoscopia">Endoscopia</label>
+                            </td>
 
-                    <br><br>
+                            <td><input id="ph+manometria" type="radio" name="profissional" class="profissional"
+                                    value=", *exames* de *Manometria e pHmetria esofágicas," data-value-two="pHmetria">
+                                <label for="ph+manometria">pHmetria</label>
+                            </td>
 
-                </div>
+                            <td><input id="manometria" type="radio" name="profissional" class="profissional"
+                                    value=", *exame* de *Manometria esofágica," data-value-two="Manometria">
+                                <label for="manometria">Manometria</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                        </tr>
 
-                <span>
-                    <label>Dia</label><br>
-                </span>
+                    </div>
 
-                <div>
-                    <input id="amanha" type="radio" name="dia" class="dia" value="amanhã" checked>
-                    <label for="amanha">Amanhã</label><br>
+                    <div class="dia">
 
-                    <input type="radio" name="dia" id="other" value="other"> <label for="other">Outro</label> <input
-                        id="inputother" type="date" onchange="changeRadioOther()">
+                        <th colspan="3"><label>Selecione um dia:</label><br></th>
+                        <tr>
+                            <td><input id="hoje" type="radio" name="dia" class="dia" value="hoje"
+                                    data-value-two="hoje"></input>
+                                <label for="hoje">Hoje</label>
+                            </td>
 
-                    <br><br>
+                            <td><input id="amanha" type="radio" name="dia" class="dia" value="amanhã"
+                                    data-value-two="amanhã" checked></input>
+                                <label for="amanha">Amanhã</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input id="other" type="radio" name="dia" class="dia" value="other"></input>
+                                <label for="other">Outro</label>
+                                <input id="inputother" type="date" onchange="changeRadioOther()"></input>
+                            </td>
+                        </tr>
 
-                </div>
+                    </div>
+                </table>
 
-                <span class="hora">
-                    <label for="hora">Hora</label><br>
-                    <input id="hora" type="time" placeholder="Hora" class="hora">
-                </span>
+                <button onclick="abrirConfirmacaoAgenda ()" class="confirmarr">Confirmar</button>
 
-            </div>
-
-            <button onclick="sendToWhatsapp()">Enviar</button>
         </form>
-    </div>
 
+    </div>
+    <button onclick="location.href='./confirmar-paciente.html'" type="button" class="button-6" role="button">Confirmar
+        Paciente</button>
+
+    <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>

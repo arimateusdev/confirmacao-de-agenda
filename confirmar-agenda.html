@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Agenda</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="escreveTela ()">
+
+    <div class="container">
+
+        <h2 class="titulo2">Você está confirmando a agenda de <strong id=agenda></strong> <br> de <strong
+                id="odia"></strong></h2>
+
+        <br>
+
+        <form>
+            <span>
+                <label for="name">Paciente</label><br>
+                <input id="name" type="text" placeholder="Informe o nome do paciente" required><br>
+            </span>
+
+            <span>
+                <label for="number">Telefone</label><br>
+                <input id="number" type="tel" minlength="10" placeholder="Informe o telefone do paciente"
+                    required>
+            </span>
+
+            <div class="hora">
+                <span>
+                    <label for="hora">Horário</label>
+                    <br><input id="hora" type="time" class="hora" name="hora" required></input>
+                </span>
+                <br>
+
+            </div>
+
+            <button type="button" class="btn-whatsapp" onclick="sendToWhatsapp ()">Enviar no Whatsapp</button>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
