@@ -5,62 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação por Agendamento - beta</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="./style-agendamento.css">
+    <link rel="stylesheet" href="./src/css/style-agendamento.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h2 class="titulo">Confirmação por Agendamento - <span>beta</span></h2><br>
+        <h2 class="titulo">Confirmação por Agendamento - beta</h2><br>
 
         <form>
 
             <span>
-                <label>Obs.: Só Funciona para Médicos. </br> NÃO funciona para fonos, fisios, médicas ou exames.</label><br><br>
+                <label for="agendamento">Informe o agendamento do Doctos:</label><br><br>
             </span>
 
-            <span>
-                <label for="agendamento">Informe o agendamento:</label><br>
-            </span>
-            
-            <textarea name="agendamento" cols="30" rows="1" id="agendamento"></textarea><br>
+            <textarea name="agendamento" onfocus="this.value=''" cols="30" rows="1" id="agendamento"></textarea><br>
 
-            <button type="button" name="agendamento" class="btn-whatsapp" onclick="enviarPorWhatsapp ()">Enviar no
+            <button type="button" name="agendamento" class="btn-whatsapp" onclick="confirmarPorWhatsapp ()">Enviar por
                 Whatsapp</button>
 
         </form>
     </div>
 
-    <script>
-        function enviarPorWhatsapp() {
-
-            var str = document.getElementById('agendamento').value;
-
-            var dadosNome = str.split(/[\t|\n]/);
-            var dados = str.split(/[\t]/);
-
-            console.log("linha : " + dadosNome);
-            console.log("ultimo : " + dados);
-
-            let nome = dadosNome[1];
-            console.log("name : " + nome);
-            let telefone = "55" + dados[2];
-            console.log("number : " + telefone);
-            let profissional = dados[dados.length - 4];
-            console.log("profissional : " + profissional);
-            let dia = dados[dados.length - 3];
-            console.log("dia : " + dia);
-            let horario = dados[dados.length - 2];
-            console.log("hora : " + horario);
-
-            var url = "https://web.whatsapp.com/send?phone=" + telefone + "&text="
-                + "Olá *" + nome + "*,%0a%0aPodemos confirmar seu agendamento com *Dr. " + profissional + "* dia *" + dia + "* às *" + horario + "*?";
-
-            window.open(url, '_blank').focus();
-        }
-    </script>
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>

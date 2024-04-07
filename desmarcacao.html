@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desmarcação por Agendamento - beta</title>
+    <link rel="shortcut icon" href="./src/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/css/style-agendamento.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="titulo">Desmarcação por Agendamento - beta</h2><br>
+
+        <form>
+
+            <span>
+                <label for="agendamento">Informe o agendamento do Doctos:</label><br><br>
+            </span>
+
+            <textarea name="agendamento" onfocus="this.value=''" cols="30" rows="1" id="agendamento"></textarea><br>
+
+            <button type="button" name="agendamento" class="btn-whatsapp" onclick="desmarcarPorWhatsapp ()">Enviar por
+                Whatsapp</button>
+
+        </form>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação de Agendamento</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
@@ -16,7 +16,13 @@
 
         <h2 class="titulo">Confirmação de Agenda</h2><br>
 
-        <button onclick="myFunction()" class="button-6" role="button">Confirmar Agenda</button>
+        <button onclick="location.href='./agendamento.html'" type="button" class="button-6" role="button">Confirmar
+            por Agendamento - Beta</button>
+    
+        <button onclick="location.href='./desmarcacao.html'" type="button" class="button-6" role="button">Desmarcar
+            por Agendamento - Beta</button>
+
+        <button onclick="myFunction()" class="button-6" role="button">Confirmar Agenda (Manualmente)</button>
 
         <form method="get" action="./confirmar-agenda.html" id="agendas">
 
@@ -146,13 +152,9 @@
         </form>
 
     </div>
-    <button onclick="location.href='./confirmar-paciente.html'" type="button" class="button-6" role="button">Confirmar
-        Paciente</button>
-    
-    <button onclick="location.href='./agendamento.html'" type="button" class="button-6" role="button">Confirmar
-            Por Agendamento - Beta</button>
+    <button onclick="location.href='./confirmar-paciente.html'" type="button" class="button-6" role="button">Confirmar Paciente (Manualmente)</button>
 
-    <script src="./script.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>
